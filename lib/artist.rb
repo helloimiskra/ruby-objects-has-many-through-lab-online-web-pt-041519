@@ -36,7 +36,7 @@ class Artist
     artist = self.new(new_song)
     song.artist = artist
     artist.add_song(new_song)
-    
+
   end
 
 end
