@@ -19,11 +19,16 @@ class Artist
     @@all
   end
 
+  def add_song(song)
+    @songs << song
+  end
+
   def new_song(name, genre)
     new_song = Song.new(name, genre)
-    @songs << new_song
-    self.songs << new_song.name
-    self.genre << new_song.genre
+    artist = self.new(new_song)
+    song.artist = artist
+    artist.add_song(new_song)
+    
   end
 
 end
