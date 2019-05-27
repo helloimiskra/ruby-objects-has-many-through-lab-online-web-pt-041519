@@ -8,7 +8,7 @@ class Artist
     @name = name
     @@all << self
     @songs = []
-    @genres =[]
+    @genres = []
   end
 
   def save
@@ -21,6 +21,14 @@ class Artist
 
   def add_song(song)
     @songs << song
+  end
+
+  def genres
+    @genres
+  end
+
+  def songs
+    @songs
   end
 
   def new_song(name, genre)
