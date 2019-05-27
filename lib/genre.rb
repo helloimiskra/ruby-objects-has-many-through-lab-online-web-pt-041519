@@ -1,11 +1,17 @@
 class Genre
-  attr_accessor :song, :genre
+  attr_accessor :songs, :name
   attr_reader
 
-  def initialize(genre)
-    @genre = genre
-    @song = song
+  @@all = []
+
+  def initialize(name)
+    @name = name
+    @songs = songs
+    @@all << self
   end
 
+  def self.all
+    @@all
+  end
 
 end
