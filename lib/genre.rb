@@ -14,5 +14,8 @@ class Genre
     @@all
   end
 
+  def self.songs
+    @songs
+  end
 
 end
