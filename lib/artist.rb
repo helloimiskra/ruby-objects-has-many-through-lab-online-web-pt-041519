@@ -8,6 +8,7 @@ class Artist
     @name = name
     @@all << self
     @songs = []
+    @genres =[]
   end
 
   def save
@@ -20,7 +21,8 @@ class Artist
 
   def new_song(name, genre)
     new_song = Song.new(name, genre)
-    new_song.artist = self
+    self.songs << new_song.name
+    self.genre << new_song.genre
   end
 
 end
