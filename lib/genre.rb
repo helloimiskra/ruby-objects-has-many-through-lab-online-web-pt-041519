@@ -1,5 +1,5 @@
 class Genre
-  attr_accessor :songs, :name
+  attr_accessor :songs, :name, :artists
   attr_reader
 
   @@all = []
@@ -14,8 +14,10 @@ class Genre
     @@all
   end
 
-  def self.songs
+  def songs
     @songs
   end
 
+  def artists
+    
 end
