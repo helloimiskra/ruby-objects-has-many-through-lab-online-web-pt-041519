@@ -14,7 +14,6 @@ class Doctor
 
   def new_appointment(date, patient)
     new_appt = Appointment.new(date, patient, self)
-    new_appt
   end
 
   def appointments
@@ -25,7 +24,7 @@ class Doctor
 
   def patients
     appointments.map do |appointment|
-      appointment.doctor
+      appointment.patient
     end
   end
 end
